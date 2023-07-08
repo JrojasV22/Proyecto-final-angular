@@ -1,0 +1,20 @@
+
+<div class="d-flex align-items-center justify-content-center pt-5 mt-5">
+    <div class="card " style="width:  22rem;">
+            
+            <input type="text" placeholder="Ingrese su nombre" id="nombre" [(ngModel)]="nombre" (keyup.enter)="LimpiarInput()" class="form-control" name="nombre"  #name>
+
+            <button class="btn btn-primary mt-2 " style="width: 4rem; height: 2.2rem; font-size: 14px; position: relative; left: 9rem; bottom:1.rem;" (click)="mostrar(name.value) "(click)="mostrarMensaje()" (click)="LimpiarInput()">
+                Enter
+            </button>
+        <div style="height: 10px;">
+            <div class="alert alert-primary mt-2" style="height: 4.5rem;" *ngIf="openAlert">
+                <h5>{{ mensaje }}</h5>
+                <button class="btn btn-danger" style="font-size: 7px; position: relative; left: 9rem; bottom:10px;" (click)="openAlert = false">
+                    x
+                </button>
+            </div>
+        </div>
+        
+    </div>
+</div>
